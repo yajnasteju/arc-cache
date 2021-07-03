@@ -17,10 +17,12 @@ int main()
 		a->insert(5, 6);
 		a->print();
 		cout << a->fetch(5);
+		a->fetch(6);
 
 	}
 	catch (std::exception e)
 	{
+		cout << "Exception !!!!!!!!!!!!! => ";
 		cout << e.what() << endl;
 	}
 }

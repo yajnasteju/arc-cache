@@ -52,5 +52,5 @@ T2 arc::ARC<T1, T2>::fetch(T1 key) {
 	
 	if (t1.find(key) != t1.end())
 		return t1[key];
-	throw new std::exception("Miss");
+	throw std::exception("Miss");
 }
