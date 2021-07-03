@@ -1,10 +1,26 @@
 #include <iostream>
 
 #ifndef ARC
-#include "ARC.hpp"
+#include "ARC.cpp"
+
 #endif // !ARC
+
+using namespace arc;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	ARC<int , int> *a = new ARC<int,int>();
+	
+	try {
+		a->insert(1, 2);
+		a->insert(3, 4);
+		a->insert(5, 6);
+		a->print();
+		cout << a->fetch(5);
+
+	}
+	catch (std::exception e)
+	{
+		cout << e.what() << endl;
+	}
 }
