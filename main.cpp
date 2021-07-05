@@ -49,8 +49,8 @@ int main()
 		switch (id)
 		{
 		case 1:
-			cout << "Input keys : 1,2,3,4,5,6,7,8,9,10 " << endl;
-			cout << "Expected op : T1 should contain 10 to 6 " << endl;
+			cout << "Input keys : 1,2,3,4,5 " << endl;
+			cout << "Expected op : T1 should contain 5 to 1 " << endl;
 
 			for (int i = 1; i <= 5; i++)
 				a->fetch(i, value);
@@ -59,8 +59,8 @@ int main()
 			break;
 
 		case 2:
-			cout << "Input keys : 1,2,3,4,5,	1,2,3,4, 	6, " << endl;
-			cout << "Expected op : T1 should contain 6, B1 should contain 5, and B2 should contain 4 to 1" << endl;
+			cout << "Input keys : 1,2,3,4,5, 1,2,3,4, 6, " << endl;
+			cout << "Expected op : T1 should contain 6, B1 should contain 5, and T2 should contain 4 to 1" << endl;
 
 			for (int i = 1; i <= 5; i++)
 				a->fetch(i, value);
@@ -79,7 +79,7 @@ int main()
 				
 			for (int i = 1; i <= 5; i++)
 				a->fetch(i, value);
-			for (int i = 1; i <= 11; i++)
+			for (int i = 1; i <= 6; i++)
 				a->fetch(i, value);
 
 			a->print();
