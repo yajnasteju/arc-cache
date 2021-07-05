@@ -149,6 +149,7 @@ int main()
 
 			}
 		default:
+			cout << " Select 1-7 as below" << endl;
 			break;
 		}
 
