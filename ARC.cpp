@@ -112,7 +112,7 @@ void arc::ARC<T1, T2>::clear()
 }
 
 template<typename T1, typename T2>
-void arc::ARC<T1, T2>::replace(int &p , T1 key)
+void arc::ARC<T1, T2>::replace(float &p , T1 key)
 {
 	T2 value;
 	if ((t1.size() >= 1) &&
