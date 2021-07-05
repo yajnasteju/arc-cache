@@ -86,7 +86,7 @@ T2 arc::ARC<T1, T2>::fetch(T1 key ,T2 &value) {
 }
 
 template<typename T1, typename T2>
-bool arc::ARC<T1, T2>::hit(std::list<std::pair<T1, T2>> cache , T1 key , T2  &value)
+bool arc::ARC<T1, T2>::hit(std::list<std::pair<T1, T2>> cache ,const T1 &key , T2  &value)
 {
 	auto it = cache.begin();
 	while (it != cache.end())
@@ -112,7 +112,7 @@ void arc::ARC<T1, T2>::clear()
 }
 
 template<typename T1, typename T2>
-void arc::ARC<T1, T2>::replace(float &p , T1 key)
+void arc::ARC<T1, T2>::replace(float &p ,const T1 & key)
 {
 	T2 value;
 	if ((t1.size() >= 1) &&
@@ -127,7 +127,7 @@ void arc::ARC<T1, T2>::replace(float &p , T1 key)
 }
 
 template<typename T1, typename T2>
-void arc::ARC<T1, T2>::moveList(std::list<std::pair<T1, T2>> &from, std::list<std::pair<T1, T2>> &to, T1 key)
+void arc::ARC<T1, T2>::moveList(std::list<std::pair<T1, T2>> &from, std::list<std::pair<T1, T2>> &to, const T1 & key)
 {
 	T2 value;
 	auto it = from.begin();
@@ -144,7 +144,7 @@ void arc::ARC<T1, T2>::moveList(std::list<std::pair<T1, T2>> &from, std::list<st
 }
 
 template<typename T1, typename T2>
-void arc::ARC<T1, T2>::moveToTop(std::list<std::pair<T1, T2>>& list, T1 key , T2 value)
+void arc::ARC<T1, T2>::moveToTop(std::list<std::pair<T1, T2>>& list, const T1 & key , const T2 & value)
 {
 	list.remove(make_pair(key, value));
 	list.push_front(make_pair(key, value));
